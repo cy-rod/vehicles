@@ -6,7 +6,7 @@ import plotly.express as px
 from PIL import Image
 
 ####################
-# TITLE BAR
+# PAGE TITLE
 ####################
 
 # Load photo to the page
@@ -25,6 +25,10 @@ This page shows the statistics of vehicle sales in the U.S. base on different va
 ***        
 """)
 
+####################
+# PAGE BODY
+####################
+
 # Load dataset
 vehicles = pd.read_csv('vehicles_us.csv')
 
@@ -35,7 +39,7 @@ st.dataframe(vehicles)
 st.write("""       
 """)
 
-st.subheader('Vehicle Condition Per Manufacturer')
+st.header('Vehicle Condition Per Manufacturer')
 # Plot the distribution of vehicle's condition by the manufacturer
 fig = px.histogram(vehicles, 
                    x="manufacturer", 
