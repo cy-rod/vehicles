@@ -39,7 +39,7 @@ vehicles = pd.read_csv('vehicles_us.csv')
 # Add a 'manufacturer' column in the dataset for easier reference
 vehicles['manufacturer'] = vehicles['model'].apply(lambda x: x.split()[0])
 
-# Add header and title
+# Add header and caption
 st.header('View Dataset')
 st.caption('User can search, expand or download the data as CSV.')
 
